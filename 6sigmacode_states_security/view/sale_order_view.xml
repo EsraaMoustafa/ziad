@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="inherit_sale_order_view_security" model="ir.ui.view">
+        <field name="name">inherit.sale.order.view.security</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_draft']" position="attributes">
+                <attribute name="groups">6sigmacode_states_security.group_allow_sales_reset_draft</attribute>
+            </xpath>
+            <xpath expr="//form//header//button[@name='action_cancel']" position="attributes">
+                <attribute name="groups">6sigmacode_states_security.group_allow_sales_cancel</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_confirm'][2]" position="attributes">
+                <attribute name="groups">6sigmacode_states_security.group_allow_sales_confirm</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

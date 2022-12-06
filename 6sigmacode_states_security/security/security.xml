@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="group_allow_sales_reset_draft" model="res.groups">
+        <field name="name">Allow Sales Reset To Draft</field>
+    </record>
+
+    <record id="group_allow_sales_cancel" model="res.groups">
+        <field name="name">Allow Sales Cancel</field>
+    </record>
+
+    <record id="group_allow_sales_confirm" model="res.groups">
+        <field name="name">Allow Sales Confirm</field>
+    </record>
+
+    <record id="group_allow_invoice_reset_draft" model="res.groups">
+        <field name="name">Allow Invoice Reset To Draft</field>
+    </record>
+
+    <record id="group_allow_invoice_cancel" model="res.groups">
+        <field name="name">Allow Invoice Cancel</field>
+    </record>
+
+    <record id="group_allow_invoice_confirm" model="res.groups">
+        <field name="name">Allow Invoice Confirm</field>
+    </record>
+
+</odoo>

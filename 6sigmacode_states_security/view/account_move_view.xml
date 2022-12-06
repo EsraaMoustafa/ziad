@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="inherit_account_move_view_security" model="ir.ui.view">
+        <field name="name">inherit.account.move.view.security</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='button_draft']" position="attributes">
+                <attribute name="groups">6sigmacode_states_security.group_allow_invoice_reset_draft</attribute>
+            </xpath>
+            <xpath expr="//button[@name='button_cancel']" position="attributes">
+                <attribute name="groups">6sigmacode_states_security.group_allow_invoice_cancel</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_post'][2]" position="attributes">
+                <attribute name="groups">6sigmacode_states_security.group_allow_invoice_confirm</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
