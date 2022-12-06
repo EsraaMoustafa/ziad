@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="saudi_vat_invoice_simplified_ziad_header">
+        <div t-attf-class="header">
+            <div class="o_clean_header col-12">
+                <div class="row">
+                    <div class="col-4 text-left font-weight-bold" style="font-family: cairo">
+                        <div>
+                            <t t-esc="doc.company_id.name"/>
+                        </div>
+                        <div>
+                            C . R / <t t-esc="doc.company_id.company_registry"/>
+                        </div>
+                        <div>
+                            VAT / <t t-esc="doc.company_id.vat"/>
+                        </div>
+                    </div>
+                    <div class="col-4 text-center" style="font-family: cairo">
+                        <img t-attf-src="data:image/*;base64,{{doc.company_id.logo}}"
+                                         style="height: 140px;"/>
+                    </div>
+                    <div class="col-4 text-right font-weight-bold" style="font-family: cairo">
+                        <div>
+                             <t t-esc="doc.company_id.name_arabic"/>
+                        </div>
+                        <div>
+                            سجل تجارى / <t t-esc="doc.company_id.company_registry"/>
+                        </div>
+                         <div>
+                             الرقم الضريبى / <t t-esc="doc.company_id.vat"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</odoo>
