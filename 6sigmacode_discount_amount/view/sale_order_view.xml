@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="inherit_sale_order_view_discount" model="ir.ui.view">
+        <field name="name">inherit.sale.order.view.discount</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook//page[@name='order_lines']//field[@name='order_line']//tree//field[@name='discount']" position="after">
+                <field name="discount_amount"  force_save="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
