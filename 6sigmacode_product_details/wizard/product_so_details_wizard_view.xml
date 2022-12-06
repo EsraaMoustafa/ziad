@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_product_so_details_wizard" model="ir.ui.view">
+        <field name="name">View Product SO Details Wizard</field>
+        <field name="model">product.so.details.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Product Sale Details">
+                    <sheet>
+                        <group>
+                            <field name="product_so_details" >
+                                <tree>
+                                    <field name="product_id" optional="hide"/>
+                                    <field name="partner"/>
+                                    <field name="product_uom_qty"/>
+                                    <field name="price_unit"/>
+                                    <field name="product_uom" optional="hide"/>
+                                    <field name="create_date"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button string="Close" class="oe_link oe_highlight" special="cancel" />`
+                    </footer>
+                </form>
+        </field>
+    </record>
+
+    <record id="action_view_so_product_details" model="ir.actions.act_window">
+        <field name="name">Product Sale Details</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.so.details.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>
