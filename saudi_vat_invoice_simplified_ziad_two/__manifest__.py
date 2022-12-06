@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+{
+    'name': "Saudi Vat Invoice Simplified Two Ziad",
+    'summary': """Saudi Vat Invoice Simplified Ziad""",
+    'description': """Helps to generate Simplified""",
+    'version': '14.0.1.0.0',
+    'category': 'Accounting',
+    'author': "",
+    'website': "",
+    'license': 'LGPL-3',
+    'depends': ['base', 'web', 'account'],
+    'qweb': [],
+    'data': [
+        'view/account_move.xml',
+        'view/custom_theme.xml',
+        'report/saudi_vat_invoice_report_paperformat_ziad_two.xml',
+        'report/saudi_vat_simplified_tax_ziad_two.xml',
+        'report/saudi_vat_simplified_tax_ziad_two_footer.xml',
+        'report/saudi_vat_simplified_tax_ziad_two_header.xml',
+    ],
+    'images': ['static/description/icon.png'],
+    'installable': True,
+    'application': False,
+    'auto_install': False,
+}

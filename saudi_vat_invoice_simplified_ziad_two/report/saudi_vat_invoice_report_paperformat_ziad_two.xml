@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="paperformat_simplified_ziad_two" model="report.paperformat">
+            <field name="name">European A4 low margin</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">30</field>
+            <field name="margin_bottom">20</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">20</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <record id="report_simplified_ziad_two" model="ir.actions.report">
+            <field name="paperformat_id" ref="paperformat_simplified_ziad_two"/>
+            <field name="name">Saudi Vat Invoice Ziad Two</field>
+            <field name="model">account.move</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">saudi_vat_invoice_simplified_ziad_two.saudi_vat_simplified_tax_ziad_layout_two</field>
+            <field name="report_file">saudi_vat_invoice_simplified_ziad_two.saudi_vat_simplified_tax_ziad_layout_two</field>
+            <field name="binding_model_id" ref="model_account_move"/>
+            <field name="binding_type">report</field>
+        </record>
+
+    </data>
+</odoo>
