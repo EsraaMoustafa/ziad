@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+        <!-- Inherit Form View to Modify it -->
+        <record id="inherit_account_move_line_view_margin" model="ir.ui.view">
+            <field name="name">inherit.account.move.line.view.margin</field>
+            <field name="model">account.move.line</field>
+            <field name="inherit_id" ref="ob_invoice_line_view.ob_account_move_line_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='price_unit']" position="after">
+                    <field name="unit_cost"/>
+                    <field name="unit_margin"/>
+                </xpath>
+                <xpath expr="//field[@name='tax_ids']" position="after">
+                    <field name="total_price"/>
+                    <field name="discount_amount"/>
+                </xpath>
+                <xpath expr="//field[@name='price_subtotal']" position="after">
+                    <field name="total_cost"/>
+                    <field name="line_margin" string="Total Margin"/>
+                    <field name="margin_percent"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
